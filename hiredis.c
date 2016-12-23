@@ -624,7 +624,6 @@ void redisFree(redisContext *c) {
         return;
     if (c->fd > 0)
         close(c->fd);
-    }
     if (c->obuf != NULL)
         sdsfree(c->obuf);
     if (c->reader != NULL)
